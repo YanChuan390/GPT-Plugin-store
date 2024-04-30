@@ -168,7 +168,7 @@ class Json:
                             data = json.loads(response.text)
                             api_url = data.get("api")
                             if api_url is None:
-                                self.write_to_excel(count, 'api_url', '没有api，json文件有问题')
+                                self.write_to_excel(count, 'api_url', 'W3')
                                 count +=1
                                 continue
                             api_url = api_url.get("url")
@@ -178,7 +178,7 @@ class Json:
                             self.write_to_excel(count, 'api_url',api_url )
 
                         except json.decoder.JSONDecodeError as e:
-                            self.write_to_excel(count, 'apiurl_state','其他html占据')
+                            self.write_to_excel(count, 'apiurl_state','W3')
                     else:
                         self.write_to_excel(count, 'apiurl_state', response.status_code)
                 except requests.exceptions.Timeout as e1:
@@ -306,7 +306,7 @@ class Json:
                         continue
                     self.handle_get(api_info, count)
                 else:
-                    self.write_to_excel(count, 'request_status', response.status_code)  # 没有200回应
+                    self.write_to_excel(count, 'request_status', response.status_code)  
             except requests.exceptions.Timeout as e:
                 self.write_to_excel(count,'request_status',"W1")
             except requests.exceptions.RequestException as e2:
@@ -442,11 +442,9 @@ class Json:
         self.save_changes()
 
     def normalize_url(self,url):
-
         url = re.sub(r'^https?://', '', url, flags=re.IGNORECASE)
         url = re.sub(r'\.html?$', '', url, flags=re.IGNORECASE)
         url = url.rstrip('/')
-
         return url
 
     def check_auth(self,num):
@@ -462,7 +460,7 @@ class Json:
                 if 'auth' in json_dict:
                     auth_info = json_dict['auth']
                 else:
-                    auth_info = "not exist"  # 或者 raise KeyError("auth key not found")
+                    auth_info = "not exist"  
                 self.write_to_excel(count,'auth',str(auth_info))
             except json.decoder.JSONDecodeError:
                 self.write_to_excel(count, 'auth', 'cannot parse')
@@ -554,7 +552,6 @@ class Json:
         count=num
         url_state=self.df['url_state']
         for api in json_info[count:]:
-
             try:
                 if url_state[count]!='Y':
                     count += 1
@@ -571,7 +568,6 @@ class Json:
                 self.write_to_excel(count,'name_issue','_cannot parse')
             except Exception as e:
                 self.write_to_excel(count, 'name_issue', 'Other Exception: ' + str(e))
-
             count += 1
 
         self.save_changes()
