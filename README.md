@@ -8,6 +8,9 @@
 │ │ ├── find_country.py
 │ │ ├── search_gpts.py
 │ │ ├── utilities.py
+| ├── security and consistency analysis
+│ │ ├──analysis_method.py
+│ │ ├──analysis_process.py
 ├── dataset
 │ ├── plugins_scrape
 │ ├── plugin_categories.xlsx
@@ -31,8 +34,12 @@ Description for each of the main files are as follows.
 
 ```utilities.py``` : File for utilities functions such as filtering a specific category, get a column from an excel file as a python list, and merging excel files based on common attributes. 
 
+```analysis_method.py```: Method files for analyzing plugins security and consistency.
+
+```analysis_process.py```: Analyze the process files for plug-in security and consistency, and keep the output results in excel files，the basic data is from dataset. This data needs to be executed step by step to ensure that the data can be checked at any time. 
+
 <h1>dataset</h1>
-<br>
+<br>  
 
 **plugins_scrape** : A folder containing Excel files listing all plugins on the plugin store and their associated information collected daily from 20/11/2023 to 19/3/2024.
 <br>
