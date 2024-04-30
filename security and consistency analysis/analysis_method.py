@@ -11,8 +11,6 @@ from bs4 import BeautifulSoup
 import yaml
 from urllib.parse import urljoin, urlparse
 
-# execl_path = r"C:\Users\rrm_a\Desktop\test-2.xlsx"
-# df = pd.read_excel(execl_path)
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
