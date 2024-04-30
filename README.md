@@ -14,6 +14,7 @@
 ├── dataset
 │ ├── plugins_scrape
 │ ├── plugin_categories.xlsx
+│ ├── Plugin_inconsistency_and_security.xlsx
 ```
 
 Note: This tree includes only main files.
@@ -45,4 +46,6 @@ Description for each of the main files are as follows.
 <br>
 
 ```plugin_categories.xlsx``` : An Excel file containing plugins and their assigned categories. An overview tally of each category is calculated at the end of the file. This file utilizes the plugin scrape version of 10/1/2024.
+
+```Plugin_inconsistency_and_security.xlsx```:An excel file used to store plugin consistency and security analysis data before GPTs release.
 
