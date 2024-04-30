@@ -2,8 +2,7 @@
 ├── README.md
 ├── LICENSE.md
 ├── INSTALL.md
-├── A Characterization and Security Measurement of GPT Plugin
-Ecosystem
+├── src
 │ ├── categorisation_analysis
 │ │ ├── categorise_plugins.py
 │ │ ├── find_country.py
@@ -26,6 +25,9 @@ Description for each of the main files are as follows.
 Ecosystem</h1>
 <br>
 
+<h2>src</h2>
+<br>
+
 **categorisation_analysis**
 <br>
 
@@ -44,7 +46,7 @@ Ecosystem</h1>
 
 ```analysis_process.py```: Analyze the process files for plug-in security and consistency, and keep the output results in excel files，the basic data is from dataset. This data needs to be executed step by step or task by task to ensure that the data can be checked at any time, after multiple runs, the plug-in data security and consistency are tested.
 
-<h1>dataset</h1>
+<h2>dataset</h2>
 <br>  
 
 **plugins_scrape** : A folder containing Excel files listing all plugins on the plugin store and their associated information collected daily from 20/11/2023 to 19/3/2024.
