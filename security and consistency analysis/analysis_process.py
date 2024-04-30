@@ -6,7 +6,7 @@ item.write_down()
 item.inital_excel()
 item.save_changes()
 print('------------step 2:detect manifest file----------------------')
-#
+
 item.handle_list_2(0,'url1')
 item.save_changes()
 item.handle_list_2(0,'url2')
