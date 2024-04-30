@@ -2,7 +2,8 @@
 ├── README.md
 ├── LICENSE.md
 ├── INSTALL.md
-├── src
+├── A Characterization and Security Measurement of GPT Plugin
+Ecosystem
 │ ├── categorisation_analysis
 │ │ ├── categorise_plugins.py
 │ │ ├── find_country.py
@@ -21,7 +22,8 @@ Note: This tree includes only main files.
 
 Description for each of the main files are as follows.
 
-<h1>src</h1>
+<h1>A Characterization and Security Measurement of GPT Plugin
+Ecosystem</h1>
 <br>
 
 **categorisation_analysis**
@@ -34,6 +36,9 @@ Description for each of the main files are as follows.
 ```search_gpts``` : Automated script to use plugin names as search terms on the GPTs Hunter website (https://www.gptshunter.com/) to determine if a plugin has a corresponding GPT. Search results are screenshotted and stored in a folder.
 
 ```utilities.py``` : File for utilities functions such as filtering a specific category, get a column from an excel file as a python list, and merging excel files based on common attributes. 
+
+**security and consistency analysis**
+<br>
 
 ```analysis_method.py```: Method files for analyzing plugins security and consistency.
 
