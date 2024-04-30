@@ -2,7 +2,8 @@
 ├── README.md
 ├── LICENSE.md
 ├── INSTALL.md
-├── src
+├── A Characterization and Security Measurement of GPT Plugin
+Ecosystem
 │ ├── categorisation_analysis
 │ │ ├── categorise_plugins.py
 │ │ ├── find_country.py
