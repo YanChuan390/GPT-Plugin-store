@@ -169,7 +169,7 @@ class Json:
                             data = json.loads(response.text)
                             api_url = data.get("api")
                             if api_url is None:
-                                self.write_to_excel(count, 'api_url', '没有api，json文件有问题')
+                                self.write_to_excel(count, 'api_url', 'W2')
                                 count +=1
                                 continue
                             api_url = api_url.get("url")
@@ -179,7 +179,7 @@ class Json:
                             self.write_to_excel(count, 'api_url',api_url )
 
                         except json.decoder.JSONDecodeError as e:
-                            self.write_to_excel(count, 'apiurl_state','其他html占据')
+                            self.write_to_excel(count, 'apiurl_state','W1')
                     else:
                         self.write_to_excel(count, 'apiurl_state', response.status_code)
                 except requests.exceptions.Timeout as e1:
@@ -232,14 +232,14 @@ class Json:
                     if str(api_info).strip().startswith('<') or "'code': 'file_not_found' "in str(api_info) or "'error': 'No account found.'" in str(api_info):
                         self.write_to_excel(count, 'api_info_state', "W4")
                         continue
-                    self.write_to_excel(count,'api_info',str(api_info))#把源数据写道api_info中
+                    self.write_to_excel(count,'api_info',str(api_info))
                     self.write_to_excel(count, 'api_info_state', 'Y')
                 else:
-                    self.write_to_excel(count, 'api_info_state', response.status_code)  # 没有200回应
+                    self.write_to_excel(count, 'api_info_state', response.status_code)  
             except requests.exceptions.Timeout as e:
-                self.write_to_excel(count,'api_info_state', '超时了')  # 超时
+                self.write_to_excel(count,'api_info_state', 'w1')  
             except requests.exceptions.RequestException as e2:
-                self.write_to_excel(count,'api_info_state', e2)  # 其他错误
+                self.write_to_excel(count,'api_info_state', e2)  
             count += 1
         self.save_changes()
 
@@ -307,7 +307,7 @@ class Json:
                         continue
                     self.handle_get(api_info, count)
                 else:
-                    self.write_to_excel(count, 'request_status', response.status_code)  # 没有200回应
+                    self.write_to_excel(count, 'request_status', response.status_code)  
             except requests.exceptions.Timeout as e:
                 self.write_to_excel(count,'request_status',"W1")
             except requests.exceptions.RequestException as e2:
@@ -461,7 +461,7 @@ class Json:
                 if 'auth' in json_dict:
                     auth_info = json_dict['auth']
                 else:
-                    auth_info = "not exist"  # 或者 raise KeyError("auth key not found")
+                    auth_info = "not exist" 
                 self.write_to_excel(count,'auth',str(auth_info))
             except json.decoder.JSONDecodeError:
                 self.write_to_excel(count, 'auth', 'cannot parse')
