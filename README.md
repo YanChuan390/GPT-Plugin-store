@@ -37,7 +37,7 @@ Description for each of the main files are as follows.
 
 ```analysis_method.py```: Method files for analyzing plugins security and consistency.
 
-```analysis_process.py```: Analyze the process files for plug-in security and consistency, and keep the output results in excel files，the basic data is from dataset. This data needs to be executed step by step to ensure that the data can be checked at any time, after multiple runs, the plug-in data security and consistency are tested.
+```analysis_process.py```: Analyze the process files for plug-in security and consistency, and keep the output results in excel files，the basic data is from dataset. This data needs to be executed step by step or task by task to ensure that the data can be checked at any time, after multiple runs, the plug-in data security and consistency are tested.
 
 <h1>dataset</h1>
 <br>  
