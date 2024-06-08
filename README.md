@@ -21,8 +21,8 @@ Note: This tree includes only main files.
 
 Description for each of the main files are as follows.
 
-<h1>A Characterization and Security Measurement of GPT Plugin
-Ecosystem</h1>
+<h1>Exploring ChatGPT App Ecosystem: Distribution, Deployment
+and Security</h1>
 <br>
 
 <h2>src</h2>
